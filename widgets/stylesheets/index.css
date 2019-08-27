@@ -1,0 +1,35 @@
+.clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clockface {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: slategrey;
+  color: white;
+  margin: 10px;
+  border: 2px solid lightgray;
+  padding: 20px;
+}
+
+.clockface p {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  font-family: sans-serif;
+  font-size: 30px;
+  margin: 10px;
+  color: slategrey;
+}
+
+.clockface p span {
+
+}

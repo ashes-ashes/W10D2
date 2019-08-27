@@ -5,14 +5,16 @@ export default class Clock extends React.Component {
     super(props);
     let date = new Date();
     this.state = {
-      date: date.toTimeString().slice(0, 8)
+      time: date.toLocaleTimeString(undefined, {timeStyle: 'long', hour12: false}),
+      date: date.toDateString()
     };
   }
 
   tick() {
     let date = new Date();
     this.setState({
-      date: date.toTimeString().slice(0, 8)
+      time: date.toLocaleTimeString(undefined, { timeStyle: 'long', hour12: false}),
+      date: date.toDateString()
     });
   }
 
@@ -26,9 +28,12 @@ export default class Clock extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>this is a clock</h1>
-        <div>{this.state.date}</div>
+      <div class="clock">
+        <h1>this is a clock.</h1>
+        <div class="clockface">
+          <p><span>Time:</span> <span>{this.state.time}</span></p>
+          <p><span>Date:</span> <span>{this.state.date}</span></p>
+        </div>
       </div>
     )
   }
