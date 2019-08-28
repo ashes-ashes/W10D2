@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Clock from './frontend/clock';
 import Tabs from './frontend/tabs';
+import Weather from './frontend/weather';
 
 document.addEventListener('DOMContentLoaded', (e) => {
   let main = document.querySelector("#main");
@@ -33,6 +34,7 @@ class Root extends React.Component {
       <div className="root">
         <Clock />
         <Tabs tabs={this.tabs} />
+        <Weather />
       </div>
     )
   }
